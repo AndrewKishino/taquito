@@ -1,24 +1,23 @@
 {
-  "name": "@taquito/michelson-encoder",
+  "name": "@taquito/baker-utils",
   "version": "6.1.0-beta.0",
-  "description": "converts michelson data and types into convenient JS/TS objects",
+  "description": "Provide tezos baker utilities using taquito",
   "keywords": [
     "tezos",
     "blockchain",
-    "michelson",
-    "smart-contract"
+    "baker"
   ],
-  "main": "dist/taquito-michelson-encoder.umd.js",
-  "module": "dist/taquito-michelson-encoder.es5.js",
-  "typings": "dist/types/taquito-michelson-encoder.d.ts",
+  "main": "dist/taquito-baker-utils.umd.js",
+  "module": "dist/taquito-baker-utils.es5.js",
+  "typings": "dist/types/taquito-baker-utils.d.ts",
   "files": [
-    "signature.json",
-    "dist"
+    "dist",
+    "signature.json"
   ],
   "publishConfig": {
     "access": "public"
   },
-  "author": "Simon Boissonneault-Robert <simon@ecadlabs.com>",
+  "author": "Andrew Kishino <andrew@ecadlabs.com>",
   "repository": {
     "type": "git",
     "url": ""
@@ -67,12 +66,10 @@
     ]
   },
   "dependencies": {
-    "@taquito/utils": "^6.1.0-beta.0",
-    "bignumber.js": "^9.0.0",
-    "fast-json-stable-stringify": "^2.1.0"
+    "@taquito/rpc": "^6.1.0-beta.0",
+    "bignumber.js": "^9.0.0"
   },
   "devDependencies": {
-    "@taquito/rpc": "^6.1.0-beta.0",
     "@types/jest": "^23.3.2",
     "@types/node": "^10.14.13",
     "colors": "^1.3.2",

@@ -464,19 +464,11 @@
           "name": "@taquito/michelson-encoder",
           "version": "6.1.0-beta.0",
           "description": "converts michelson data and types into convenient JS/TS objects",
-          "keywords": [
-            "tezos",
-            "blockchain",
-            "michelson",
-            "smart-contract"
-          ],
+          "keywords": ["tezos", "blockchain", "michelson", "smart-contract"],
           "main": "dist/taquito-michelson-encoder.umd.js",
           "module": "dist/taquito-michelson-encoder.es5.js",
           "typings": "dist/types/taquito-michelson-encoder.d.ts",
-          "files": [
-            "signature.json",
-            "dist"
-          ],
+          "files": ["signature.json", "dist"],
           "publishConfig": {
             "access": "public"
           },
@@ -500,11 +492,7 @@
             "start": "rollup -c rollup.config.ts -w"
           },
           "lint-staged": {
-            "{src,test}/**/*.ts": [
-              "prettier --write",
-              "tslint --fix",
-              "git add"
-            ]
+            "{src,test}/**/*.ts": ["prettier --write", "tslint --fix", "git add"]
           },
           "jest": {
             "transform": {
@@ -512,21 +500,12 @@
             },
             "testEnvironment": "node",
             "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
-            "moduleFileExtensions": [
-              "ts",
-              "tsx",
-              "js"
-            ],
+            "moduleFileExtensions": ["ts", "tsx", "js"],
             "moduleNameMapper": {
               "^@taquito/utils$": "<rootDir>/../taquito-utils/src/taquito-utils.ts"
             },
-            "coveragePathIgnorePatterns": [
-              "/node_modules/",
-              "/test/"
-            ],
-            "collectCoverageFrom": [
-              "src/**/*.{js,ts}"
-            ]
+            "coveragePathIgnorePatterns": ["/node_modules/", "/test/"],
+            "collectCoverageFrom": ["src/**/*.{js,ts}"]
           },
           "dependencies": {
             "@taquito/utils": "^6.1.0-beta.0",
@@ -554,12 +533,12 @@
             "rollup-plugin-typescript2": "^0.22.1",
             "shelljs": "^0.8.3",
             "ts-jest": "^23.10.2",
-            "ts-node": "^7.0.1",
+            "ts-node": "^8.6.2",
             "tslint": "^5.11.0",
             "tslint-config-prettier": "^1.15.0",
             "tslint-config-standard": "^8.0.1",
             "typedoc": "^0.15.0",
-            "typescript": "~3.6.0"
+            "typescript": "~3.8.3"
           }
         }
       }

@@ -46,7 +46,7 @@ const defaultRPC = 'https://mainnet.tezrpc.me';
 const defaultChain = 'main';
 
 interface RPCOptions {
-  block: string;
+  block: string | number;
 }
 
 const defaultRPCOptions: RPCOptions = { block: 'head' };
@@ -124,7 +124,7 @@ export class RpcClient {
    */
   async getStorage(
     address: string,
-    { block }: { block: string } = defaultRPCOptions
+    { block }: RPCOptions = defaultRPCOptions
   ): Promise<StorageResponse> {
     return this.httpBackend.createRequest<StorageResponse>({
       url: this.createURL(
@@ -145,7 +145,7 @@ export class RpcClient {
    */
   async getScript(
     address: string,
-    { block }: { block: string } = defaultRPCOptions
+    { block }: RPCOptions = defaultRPCOptions
   ): Promise<ScriptResponse> {
     return this.httpBackend.createRequest<ScriptResponse>({
       url: this.createURL(
@@ -166,7 +166,7 @@ export class RpcClient {
    */
   async getContract(
     address: string,
-    { block }: { block: string } = defaultRPCOptions
+    { block }: RPCOptions = defaultRPCOptions
   ): Promise<ContractResponse> {
     const contractResponse = await this.httpBackend.createRequest<ContractResponse>({
       url: this.createURL(`/chains/${this.chain}/blocks/${block}/context/contracts/${address}`),
@@ -189,7 +189,7 @@ export class RpcClient {
    */
   async getManagerKey(
     address: string,
-    { block }: { block: string } = defaultRPCOptions
+    { block }: RPCOptions = defaultRPCOptions
   ): Promise<ManagerKeyResponse> {
     return this.httpBackend.createRequest<ManagerKeyResponse>({
       url: this.createURL(
@@ -210,7 +210,7 @@ export class RpcClient {
    */
   async getDelegate(
     address: string,
-    { block }: { block: string } = defaultRPCOptions
+    { block }: RPCOptions = defaultRPCOptions
   ): Promise<DelegateResponse> {
     return this.httpBackend.createRequest<DelegateResponse>({
       url: this.createURL(
@@ -232,7 +232,7 @@ export class RpcClient {
   async getBigMapKey(
     address: string,
     key: BigMapKey,
-    { block }: { block: string } = defaultRPCOptions
+    { block }: RPCOptions = defaultRPCOptions
   ): Promise<BigMapGetResponse> {
     return this.httpBackend.createRequest<BigMapGetResponse>(
       {
@@ -258,7 +258,7 @@ export class RpcClient {
   async getBigMapExpr(
     id: string,
     expr: string,
-    { block }: { block: string } = defaultRPCOptions
+    { block }: RPCOptions = defaultRPCOptions
   ): Promise<BigMapResponse> {
     return this.httpBackend.createRequest<BigMapResponse>({
       url: this.createURL(`/chains/${this.chain}/blocks/${block}/context/big_maps/${id}/${expr}`),
@@ -277,7 +277,7 @@ export class RpcClient {
    */
   async getDelegates(
     address: string,
-    { block }: { block: string } = defaultRPCOptions
+    { block }: RPCOptions = defaultRPCOptions
   ): Promise<DelegatesResponse> {
     const response = await this.httpBackend.createRequest<DelegatesResponse>({
       url: this.createURL(`/chains/${this.chain}/blocks/${block}/context/delegates/${address}`),
@@ -679,6 +679,18 @@ export class RpcClient {
       url: this.createURL(`/chains/${this.chain}/chain_id`),
       method: 'GET',
     });
+  }
+
+  async getCycleSnapshot(cycle: number): Promise<number> {
+    const { blocks_per_cycle } = await this.getConstants();
+    const block = (cycle + 1) * blocks_per_cycle;
+    const snapshots = await this.httpBackend.createRequest<Array<number>>({
+      url: this.createURL(
+        `/chains/main/blocks/${block}/context/raw/json/rolls/owner/snapshot/${cycle}`
+      ),
+      method: 'GET',
+    });
+    return snapshots[0];
   }
 
   /**

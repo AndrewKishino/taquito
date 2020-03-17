@@ -7,15 +7,16 @@
     "example:origination": "node -r ts-node/register --preserve-symlinks contract-origination.ts",
     "example:origination2": "node -r ts-node/register --preserve-symlinks contract-origination2.ts",
     "example:origination3": "node -r ts-node/register --preserve-symlinks contract-origination3.ts",
-    "example": "node -r ts-node/register --preserve-symlinks example-node.ts",
+    "example": "node -r ts-node/register --preserve-symlinks example-baker.ts",
     "example:activation": "node -r ts-node/register --preserve-symlinks example-activate.ts",
     "example:streamer": "node -r ts-node/register --preserve-symlinks example-streamer.ts"
   },
   "dependencies": {
+    "@taquito/baker-utils": "6.1.0-beta.0",
     "@taquito/signer": "^6.1.0-beta.0",
     "@taquito/taquito": "^6.1.0-beta.0"
   },
   "devDependencies": {
-    "ts-node": "^8.3.0"
+    "ts-node": "^8.6.2"
   }
 }

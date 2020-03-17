@@ -3,12 +3,7 @@
     "moduleResolution": "node",
     "target": "es5",
     "module": "es2015",
-    "lib": [
-      "es2015",
-      "es2016",
-      "es2017",
-      "dom"
-    ],
+    "lib": ["es2015", "es2016", "es2017", "dom"],
     "strict": true,
     "sourceMap": true,
     "esModuleInterop": true,
@@ -22,27 +17,13 @@
     "baseUrl": "packages",
     "downlevelIteration": true,
     "paths": {
-      "@taquito/rpc": [
-        "taquito-rpc/src/taquito-rpc.ts"
-      ],
-      "@taquito/michelson-encoder": [
-        "taquito-michelson-encoder/src/taquito-michelson-encoder.ts"
-      ],
-      "@taquito/utils": [
-        "taquito-utils/src/taquito-utils.ts"
-      ],
-      "@taquito/taquito": [
-        "taquito/src/taquito.ts"
-      ],
-      "@taquito/http-utils": [
-        "taquito-http-utils/src/taquito-http-utils.ts"
-      ],
-      "@taquito/signer": [
-        "taquito-signer/src/taquito-signer.ts"
-      ],
-      "@taquito/local-forging": [
-        "taquito-local-forging/src/taquito-local-forging.ts"
-      ]
+      "@taquito/rpc": ["taquito-rpc/src/taquito-rpc.ts"],
+      "@taquito/michelson-encoder": ["taquito-michelson-encoder/src/taquito-michelson-encoder.ts"],
+      "@taquito/utils": ["taquito-utils/src/taquito-utils.ts"],
+      "@taquito/taquito": ["taquito/src/taquito.ts"],
+      "@taquito/http-utils": ["taquito-http-utils/src/taquito-http-utils.ts"],
+      "@taquito/signer": ["taquito-signer/src/taquito-signer.ts"],
+      "@taquito/local-forging": ["taquito-local-forging/src/taquito-local-forging.ts"]
     }
   }
 }

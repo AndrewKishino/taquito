@@ -38,7 +38,8 @@
       "^@taquito/http-utils$": "<rootDir>/packages/taquito-http-utils/src/taquito-http-utils.ts",
       "^@taquito/utils$": "<rootDir>/packages/taquito-utils/src/taquito-utils.ts",
       "^@taquito/signer$": "<rootDir>/packages/taquito-signer/src/taquito-signer.ts",
-      "^@taquito/local-forging$": "<rootDir>/packages/taquito-local-forging/src/taquito-local-forging.ts"
+      "^@taquito/local-forging$": "<rootDir>/packages/taquito-local-forging/src/taquito-local-forging.ts",
+      "^@taquito/baker-utils$": "<rootDir>/packages/taquito-baker-utils/src/taquito-baker-utils.ts"
     },
     "coveragePathIgnorePatterns": [
       "/node_modules/",
@@ -76,13 +77,13 @@
     "shelljs": "^0.8.3",
     "travis-deploy-once": "^5.0.9",
     "ts-jest": "^24.0.2",
-    "ts-node": "^7.0.1",
+    "ts-node": "^8.6.2",
     "tslint": "^5.11.0",
     "tslint-config-prettier": "^1.15.0",
     "tslint-config-standard": "^8.0.1",
     "typedoc": "^0.16.11",
     "typedoc-plugin-lerna-packages": "^0.3.0",
-    "typescript": "~3.6.0"
+    "typescript": "~3.8.3"
   },
   "config": {
     "commitizen": {
@@ -93,5 +94,6 @@
     "extends": [
       "@commitlint/config-conventional"
     ]
-  }
+  },
+  "dependencies": {}
 }

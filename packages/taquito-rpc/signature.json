@@ -116,18 +116,11 @@
           "name": "@taquito/rpc",
           "version": "6.1.0-beta.0",
           "description": "Provides low level methods, and types to invoke RPC calls from a Nomadic Tezos RPC node",
-          "keywords": [
-            "tezos",
-            "blockchain",
-            "rpc"
-          ],
+          "keywords": ["tezos", "blockchain", "rpc"],
           "main": "dist/taquito-rpc.umd.js",
           "module": "dist/taquito-rpc.es5.js",
           "typings": "dist/types/taquito-rpc.d.ts",
-          "files": [
-            "signature.json",
-            "dist"
-          ],
+          "files": ["signature.json", "dist"],
           "publishConfig": {
             "access": "public"
           },
@@ -151,11 +144,7 @@
             "start": "rollup -c rollup.config.ts -w"
           },
           "lint-staged": {
-            "{src,test}/**/*.ts": [
-              "prettier --write",
-              "tslint --fix",
-              "git add"
-            ]
+            "{src,test}/**/*.ts": ["prettier --write", "tslint --fix", "git add"]
           },
           "jest": {
             "transform": {
@@ -163,21 +152,12 @@
             },
             "testEnvironment": "node",
             "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
-            "moduleFileExtensions": [
-              "ts",
-              "tsx",
-              "js"
-            ],
+            "moduleFileExtensions": ["ts", "tsx", "js"],
             "moduleNameMapper": {
               "^@taquito/http-utils$": "<rootDir>/../taquito-http-utils/src/taquito-http-utils.ts"
             },
-            "coveragePathIgnorePatterns": [
-              "/node_modules/",
-              "/test/"
-            ],
-            "collectCoverageFrom": [
-              "src/**/*.{js,ts}"
-            ]
+            "coveragePathIgnorePatterns": ["/node_modules/", "/test/"],
+            "collectCoverageFrom": ["src/**/*.{js,ts}"]
           },
           "dependencies": {
             "@taquito/http-utils": "^6.1.0-beta.0",
@@ -205,11 +185,11 @@
             "rollup-plugin-typescript2": "^0.22.1",
             "shelljs": "^0.8.3",
             "ts-jest": "^23.10.2",
-            "ts-node": "^7.0.1",
+            "ts-node": "^8.6.2",
             "tslint": "^5.11.0",
             "tslint-config-prettier": "^1.15.0",
             "tslint-config-standard": "^8.0.1",
-            "typescript": "~3.6.0"
+            "typescript": "~3.8.3"
           }
         }
       }

@@ -92,10 +92,7 @@
           "main": "dist/taquito-http-utils.umd.js",
           "module": "dist/taquito-http-utils.es5.js",
           "typings": "dist/types/taquito-http-utils.d.ts",
-          "files": [
-            "signature.json",
-            "dist"
-          ],
+          "files": ["signature.json", "dist"],
           "author": "Simon Boissonneault-Robert <simon@ecadlabs.com>",
           "repository": {
             "type": "git",
@@ -116,11 +113,7 @@
             "start": "rollup -c rollup.config.ts -w"
           },
           "lint-staged": {
-            "{src,test}/**/*.ts": [
-              "prettier --write",
-              "tslint --fix",
-              "git add"
-            ]
+            "{src,test}/**/*.ts": ["prettier --write", "tslint --fix", "git add"]
           },
           "jest": {
             "transform": {
@@ -128,18 +121,9 @@
             },
             "testEnvironment": "node",
             "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
-            "moduleFileExtensions": [
-              "ts",
-              "tsx",
-              "js"
-            ],
-            "coveragePathIgnorePatterns": [
-              "/node_modules/",
-              "/test/"
-            ],
-            "collectCoverageFrom": [
-              "src/**/*.{js,ts}"
-            ]
+            "moduleFileExtensions": ["ts", "tsx", "js"],
+            "coveragePathIgnorePatterns": ["/node_modules/", "/test/"],
+            "collectCoverageFrom": ["src/**/*.{js,ts}"]
           },
           "dependencies": {
             "xhr2-cookies": "^1.1.0"
@@ -165,11 +149,11 @@
             "rollup-plugin-typescript2": "^0.22.1",
             "shelljs": "^0.8.3",
             "ts-jest": "^23.10.2",
-            "ts-node": "^7.0.1",
+            "ts-node": "^8.6.2",
             "tslint": "^5.11.0",
             "tslint-config-prettier": "^1.15.0",
             "tslint-config-standard": "^8.0.1",
-            "typescript": "~3.6.0"
+            "typescript": "~3.8.3"
           }
         }
       }

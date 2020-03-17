@@ -127,18 +127,11 @@
           "name": "@taquito/react-components",
           "version": "6.1.0-beta.0",
           "description": "React Components that implement common use cases for data retrieved from the Tezos blockchain",
-          "keywords": [
-            "tezos",
-            "blockchain",
-            "react"
-          ],
+          "keywords": ["tezos", "blockchain", "react"],
           "main": "dist/taquito-react-components.umd.js",
           "module": "dist/taquito-react-components.es5.js",
           "typings": "dist/types/taquito-react-components.d.ts",
-          "files": [
-            "signature.json",
-            "dist"
-          ],
+          "files": ["signature.json", "dist"],
           "publishConfig": {
             "access": "public"
           },
@@ -161,11 +154,7 @@
             "build-storybook": "build-storybook"
           },
           "lint-staged": {
-            "{src,test}/**/*.ts": [
-              "prettier --write",
-              "tslint --fix",
-              "git add"
-            ]
+            "{src,test}/**/*.ts": ["prettier --write", "tslint --fix", "git add"]
           },
           "dependencies": {
             "@taquito/rpc": "^6.1.0-beta.0",
@@ -207,11 +196,11 @@
             "rollup-plugin-typescript2": "^0.22.1",
             "shelljs": "^0.8.3",
             "ts-jest": "^23.10.2",
-            "ts-node": "^7.0.1",
+            "ts-node": "^8.6.2",
             "tslint": "^5.11.0",
             "tslint-config-prettier": "^1.15.0",
             "tslint-config-standard": "^8.0.1",
-            "typescript": "~3.6.0"
+            "typescript": "~3.8.3"
           }
         }
       }

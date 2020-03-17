@@ -104,19 +104,11 @@
           "name": "@taquito/utils",
           "version": "6.1.0-beta.0",
           "description": "converts michelson data and types into convenient JS/TS objects",
-          "keywords": [
-            "tezos",
-            "blockchain",
-            "michelson",
-            "smart-contract"
-          ],
+          "keywords": ["tezos", "blockchain", "michelson", "smart-contract"],
           "main": "dist/taquito-utils.umd.js",
           "module": "dist/taquito-utils.es5.js",
           "typings": "dist/types/taquito-utils.d.ts",
-          "files": [
-            "dist",
-            "signature.json"
-          ],
+          "files": ["dist", "signature.json"],
           "publishConfig": {
             "access": "public"
           },
@@ -137,11 +129,7 @@
             "start": "rollup -c rollup.config.ts -w"
           },
           "lint-staged": {
-            "{src,test}/**/*.ts": [
-              "prettier --write",
-              "tslint --fix",
-              "git add"
-            ]
+            "{src,test}/**/*.ts": ["prettier --write", "tslint --fix", "git add"]
           },
           "jest": {
             "transform": {
@@ -149,18 +137,9 @@
             },
             "testEnvironment": "node",
             "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
-            "moduleFileExtensions": [
-              "ts",
-              "tsx",
-              "js"
-            ],
-            "coveragePathIgnorePatterns": [
-              "/node_modules/",
-              "/test/"
-            ],
-            "collectCoverageFrom": [
-              "src/**/*.{js,ts}"
-            ]
+            "moduleFileExtensions": ["ts", "tsx", "js"],
+            "coveragePathIgnorePatterns": ["/node_modules/", "/test/"],
+            "collectCoverageFrom": ["src/**/*.{js,ts}"]
           },
           "dependencies": {
             "blakejs": "^1.1.0",
@@ -187,12 +166,12 @@
             "rollup-plugin-typescript2": "^0.22.1",
             "shelljs": "^0.8.3",
             "ts-jest": "^23.10.2",
-            "ts-node": "^7.0.1",
+            "ts-node": "^8.6.2",
             "tslint": "^5.11.0",
             "tslint-config-prettier": "^1.15.0",
             "tslint-config-standard": "^8.0.1",
             "typedoc": "^0.15.0",
-            "typescript": "~3.6.0"
+            "typescript": "~3.8.3"
           }
         }
       }
